@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Gms.Gcm;
 using Android.Util;
 using Android.Net;
+using Android.Graphics;
 
 namespace Revelaciones_Marianas
 {
@@ -30,7 +31,9 @@ namespace Revelaciones_Marianas
                 .SetContentTitle(GetString(Resource.String.app_name))
                 .SetContentText(GetString(Resource.String.new_message))
                 .SetAutoCancel(true)
-                .SetContentIntent(pendingIntent);
+                .SetContentIntent(pendingIntent)
+                .SetVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                .SetLights(GetColor(Color.White), 3000, 3000);
 
             var notificationManager = (NotificationManager)GetSystemService(Context.NotificationService);
             notificationManager.Notify(0, notificationBuilder.Build());
