@@ -10,13 +10,13 @@ namespace MessageSender
     class MessageSender
     {
         public const string API_KEY = "AIzaSyAGnE4Z8p658N0snwEKDecrEFWwq2vesZ4";
-        public const string MESSAGE = "Hello, Xamarin!";
+        public const string MESSAGE = "Sending notification!";
 
         static void Main(string[] args)
         {
             var jGcmData = new JObject();
             var jData = new JObject();
-
+            
             jData.Add("message", MESSAGE);
             jGcmData.Add("to", "/topics/global");
             jGcmData.Add("data", jData);
