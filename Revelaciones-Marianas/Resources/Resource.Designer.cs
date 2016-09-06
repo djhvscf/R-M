@@ -268,7 +268,7 @@ namespace Revelaciones_Marianas
 			public const int Icon = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int icstatbutton_click = 2130837547;
+			public const int notificationIcon = 2130837547;
 			
 			static Drawable()
 			{
@@ -358,11 +358,8 @@ namespace Revelaciones_Marianas
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040020
-			public const int ApplicationName = 2130968608;
-			
 			// aapt resource value: 0x7f04001f
-			public const int Hello = 2130968607;
+			public const int app_name = 2130968607;
 			
 			// aapt resource value: 0x7f040001
 			public const int auth_google_play_services_client_facebook_display_name = 2130968577;
@@ -456,6 +453,21 @@ namespace Revelaciones_Marianas
 			
 			// aapt resource value: 0x7f04001e
 			public const int common_signin_button_text_long = 2130968606;
+			
+			// aapt resource value: 0x7f040024
+			public const int error = 2130968612;
+			
+			// aapt resource value: 0x7f040020
+			public const int new_message = 2130968608;
+			
+			// aapt resource value: 0x7f040021
+			public const int subscribe = 2130968609;
+			
+			// aapt resource value: 0x7f040022
+			public const int thanks = 2130968610;
+			
+			// aapt resource value: 0x7f040023
+			public const int thanks_install = 2130968611;
 			
 			static String()
 			{

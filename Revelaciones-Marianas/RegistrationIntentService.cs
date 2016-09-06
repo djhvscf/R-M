@@ -32,7 +32,7 @@ namespace Revelaciones_Marianas
             }
             catch (Exception e)
             {
-                Log.Debug("RegistrationIntentService", "Failed to get a registration token");
+                Log.Debug("RegistrationIntentService", e.Message);
                 return;
             }
         }

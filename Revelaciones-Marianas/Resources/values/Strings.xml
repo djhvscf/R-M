@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Revelaciones-Marianas</string>
+  <string name="app_name">Revelaciones Marianas</string>
+  <string name="new_message">There is a new Message from Heaven</string>
+  <string name="subscribe">Subscribe</string>
+  <string name="thanks">Thanks</string>
+  <string name="thanks_install">Thanks for installing the Revelaciones Marianas application.</string>
+  <string name="error">Sorry, an error has ocurred.</string>
 </resources>

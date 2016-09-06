@@ -1,16 +1,14 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Gms.Common;
-using Android.Util;
+using Android.Content.PM;
 
 namespace Revelaciones_Marianas
 {
-    [Activity(Label = "Revelaciones Marianas", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Revelaciones Marianas", MainLauncher = true, Icon = "@drawable/icon", 
+        ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Activity
     {
         TextView msgText;
@@ -38,14 +36,14 @@ namespace Revelaciones_Marianas
                     msgText.Text = GoogleApiAvailability.Instance.GetErrorString(resultCode);
                 else
                 {
-                    msgText.Text = "Sorry, this device is not supported";
+                    msgText.Text = GetString(Resource.String.error);
                     Finish();
                 }
                 return false;
             }
             else
             {
-                msgText.Text = "Google Play Services is available.";
+                msgText.Text = GetString(Resource.String.thanks_install);
                 return true;
             }
         }

@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Gms.Gcm;
 using Android.Util;
+using Android.Net;
 
 namespace Revelaciones_Marianas
 {
@@ -19,14 +20,15 @@ namespace Revelaciones_Marianas
 
         void SendNotification(string message)
         {
-            var intent = new Intent(this, typeof(MainActivity));
-            intent.AddFlags(ActivityFlags.ClearTop);
-            var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
+            Intent intent = new Intent(Intent.ActionView, Uri.Parse("http://www.revelacionesmarianas.com/"));
 
-            var notificationBuilder = new Notification.Builder(this)
-                .SetSmallIcon(Resource.Drawable.icstatbutton_click)
-                .SetContentTitle("GCM Message")
-                .SetContentText(message)
+            intent.AddFlags(ActivityFlags.ClearTop);
+            PendingIntent pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
+
+            Notification.Builder notificationBuilder = new Notification.Builder(this)
+                .SetSmallIcon(Resource.Drawable.notificationIcon)
+                .SetContentTitle(GetString(Resource.String.app_name))
+                .SetContentText(GetString(Resource.String.new_message))
                 .SetAutoCancel(true)
                 .SetContentIntent(pendingIntent);
 
