@@ -33,7 +33,7 @@ namespace Revelaciones_Marianas
                 .SetAutoCancel(true)
                 .SetContentIntent(pendingIntent)
                 .SetVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
-                .SetLights(Color.White.ToArgb(), 3000, 3000);
+                .SetLights(Color.White.ToArgb(), 4000, 2000);
 
             var notificationManager = (NotificationManager)GetSystemService(Context.NotificationService);
             notificationManager.Notify(0, notificationBuilder.Build());
