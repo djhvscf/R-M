@@ -19,6 +19,8 @@ namespace Revelaciones_Marianas
 
             SetContentView(Resource.Layout.Main);
             msgText = FindViewById<TextView>(Resource.Id.msgText);
+            ImageView img = FindViewById<ImageView>(Resource.Id.testImage);
+            img.SetImageResource(Resource.Drawable.notificationIcon);
 
             if (IsPlayServicesAvailable())
             {

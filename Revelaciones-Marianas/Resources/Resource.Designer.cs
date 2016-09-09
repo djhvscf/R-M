@@ -310,6 +310,9 @@ namespace Revelaciones_Marianas
 			// aapt resource value: 0x7f070004
 			public const int standard = 2131165188;
 			
+			// aapt resource value: 0x7f07000a
+			public const int testImage = 2131165194;
+			
 			// aapt resource value: 0x7f070005
 			public const int wide = 2131165189;
 			

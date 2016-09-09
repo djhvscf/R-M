@@ -11,4 +11,11 @@
         android:id="@+id/msgText"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="10dp" />
+  <ImageView
+      android:id="@+id/testImage"
+      android:layout_width="50dip"
+      android:layout_height="fill_parent" 
+      android:src="@drawable/icon"
+      android:layout_marginLeft="3dip"
+      android:scaleType="center"/>
 </LinearLayout>
